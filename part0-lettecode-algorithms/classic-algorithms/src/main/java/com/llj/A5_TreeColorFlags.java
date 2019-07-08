@@ -28,7 +28,7 @@ package com.llj;
  * 则在r的地方找到第一个不是r的元素并交换，以此类推，遇到w继续走，遇到b往前移，遇到r往后移。用图做一个详细说明：
  * Created by Administrator on 2019/7/8.
  */
-public class TreeColorFlags {
+public class A5_TreeColorFlags {
 
     public static void main(String[] args) {
         char[] colorFlags = {'r', 'w', 'b', 'w', 'w', 'b', 'r', 'b', 'w', 'r'};
