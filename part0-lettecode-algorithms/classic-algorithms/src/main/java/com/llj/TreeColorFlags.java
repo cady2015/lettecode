@@ -50,7 +50,7 @@ public class TreeColorFlags {
                 colorFlags[wFlag] = colorFlags[bFlag];
                 colorFlags[bFlag] = temp;
                 //调换完成之后，bFlag当前指向蓝色旗子,wFlag指向白色旗子，当前bFlag、wFlag指针需要同时向后移动，进入下一次比较
-                bFlag++;
+                bFlag++; 
                 wFlag++;
             } else {
                 //当rFlag指向的是红色旗子并且rFlag在wFlag后面，则rFlag需要向前移动
