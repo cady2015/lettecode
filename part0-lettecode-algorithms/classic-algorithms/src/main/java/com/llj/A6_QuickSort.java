@@ -16,10 +16,10 @@ public class A6_QuickSort {
         int i = left;
         int j = right;
         while (i < j) { //顺序很重要，要先从右边开始找
-            while (a[j] >= temp && i <= j) {
+            while (a[j] >= temp && i <= j && j != left) {
                 j--;
             }
-            while (a[i] <= temp && i <= j) {
+            while (a[i] <= temp && i <= j && i != right) {
                 i++;
             }
             if (i < j) {
@@ -29,8 +29,8 @@ public class A6_QuickSort {
             }
         }
         //当i==j时，将基准数归位
-        a[left] = a[i];
-        a[i] = temp;
+        a[left] = a[j];
+        a[j] = temp;
         quickSort(a, left, j - 1);
         quickSort(a, j + 1, right);
         return a;
