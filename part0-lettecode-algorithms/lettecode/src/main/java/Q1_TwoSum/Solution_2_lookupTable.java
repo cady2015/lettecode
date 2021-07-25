@@ -1,14 +1,14 @@
-package QA_TwoSum;
+package Q1_TwoSum;
 
 import java.util.HashMap;
 
 /**
- * 解决方法2：使用查找表--通过空间换时间
+ * 解决方法2：使用查找表--通过空间换时间  --  时间复杂度 O(n)
  *
  * 思路：
  *  1.开启一个循环，从数组头部遍历至尾部
- *  2.通过一张HashMap保存中间结果，只保存当前数及其下标
- *  3.判断条件：如果能够从该HashMap中找到当前值与target的差值==keySet中的任意一个值时，将其作为结果进行返回
+ *  2.通过一张HashMap保存中间结果，只保存“当前数及其下标”
+ *  3.判断条件：如果能够从该HashMap中找到 当前值与target的差值==keySet中的任意一个值 时，将其作为结果进行返回
  * Created by llj on 2019/7/5.
  */
 public class Solution_2_lookupTable {

@@ -1,4 +1,4 @@
-package QA_TwoSum;
+package Q1_TwoSum;
 
 import java.io.BufferedReader;
 import java.io.IOException;
