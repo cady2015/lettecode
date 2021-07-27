@@ -1,5 +1,7 @@
 package Q2_AddTwoNumbers;
 
+import common.ListNode;
+
 /**
  *
  * 两数相加--链表版本

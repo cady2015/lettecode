@@ -1,4 +1,4 @@
-import Q2_AddTwoNumbers.ListNode;
+import common.ListNode;
 
 public class testPrintList {
     public static void main(String[] args) {

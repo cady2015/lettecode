@@ -1,4 +1,4 @@
-package Q2_AddTwoNumbers;
+package common;
 
 
 public class ListNode {
