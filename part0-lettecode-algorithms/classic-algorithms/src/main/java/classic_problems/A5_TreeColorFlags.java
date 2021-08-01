@@ -1,4 +1,4 @@
-package com.llj;
+package classic_problems;
 
 /**
  * 三色旗问题：

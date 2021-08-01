@@ -1,4 +1,4 @@
-package com.llj;
+package classic_problems;
 
 /**
  * 题目：使用冒泡排序将下列数组由小到大排列：

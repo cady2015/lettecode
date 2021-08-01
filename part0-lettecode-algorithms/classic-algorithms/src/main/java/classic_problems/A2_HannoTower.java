@@ -1,4 +1,4 @@
-package com.llj;
+package classic_problems;
 
 /**
  * Created by llj on 2019/7/6.
