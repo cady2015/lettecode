@@ -1,6 +1,6 @@
 package Q2_AddTwoNumbers;
 
-import common.ListNode;
+import common.Node;
 
 /**
  *
@@ -16,15 +16,15 @@ import common.ListNode;
  */
 
 class Solution2 {
-    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public static Node addTwoNumbers(Node l1, Node l2) {
         if(l1 == null && l2 ==null){
             return null;
         }
         if(l1 == null){
-            l1 = new ListNode(0);
+            l1 = new Node(0);
         }
         if(l2 == null){
-            l2 = new ListNode(0);
+            l2 = new Node(0);
         }
         int rval = l1.val + l2.val;
         if(rval >= 10){ //对进位情况进行处理
@@ -32,19 +32,19 @@ class Solution2 {
             if(l1.next != null){
                 l1.next.val+=1; // 直接给l1的下一位加1 ，相当于进位操作
             }else{
-                l1.next = new ListNode(1); // l1 已经到了尾部，直接将进位值赋给l1新建的尾部节点
+                l1.next = new Node(1); // l1 已经到了尾部，直接将进位值赋给l1新建的尾部节点
             }
         }
-        return new ListNode(rval, addTwoNumbers(l1.next, l2.next));
+        return new Node(rval, addTwoNumbers(l1.next, l2.next));
     }
     public static void main(String[] args) {
-        ListNode l1 = new ListNode(2,new ListNode(4,new ListNode(3)));
-        ListNode.printList(l1);
+        Node l1 = new Node(2,new Node(4,new Node(3)));
+        Node.printList(l1);
 
-        ListNode l2 = new ListNode(4,new ListNode(6,new ListNode(5,new ListNode(8))));
-        ListNode.printList(l2);
+        Node l2 = new Node(4,new Node(6,new Node(5,new Node(8))));
+        Node.printList(l2);
 
-        ListNode listRes = addTwoNumbers(l1, l2);
-        ListNode.printList(listRes);
+        Node listRes = addTwoNumbers(l1, l2);
+        Node.printList(listRes);
     }
 }

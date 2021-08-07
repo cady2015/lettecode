@@ -1,8 +1,8 @@
 package base_sort;
 
 import static base_sort.A1_SelectionSort.swap;
-import static base_sort.CommonUtil.*;
-import static base_sort.CommonUtil.printArray;
+import static common.CommonUtil.*;
+import static common.CommonUtil.printArray;
 
 /**
  * 插入排序

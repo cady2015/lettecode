@@ -1,24 +1,26 @@
 package common;
 
 
-public class ListNode {
+public class DoubleNode {
     public int val;
-    public ListNode next;
+    public DoubleNode last;
+    public DoubleNode next;
 
-    ListNode() {
+    public DoubleNode() {
     }
 
-    public ListNode(int val) {
+    public DoubleNode(int val) {
         this.val = val;
     }
 
-    public ListNode(int val, ListNode next) {
+    public DoubleNode(int val, DoubleNode last, DoubleNode next) {
         this.val = val;
+        this.last = last;
         this.next = next;
     }
 
-    public static void printList(ListNode head) {
-        ListNode tail = head;
+    public static void printList(DoubleNode head) {
+        DoubleNode tail = head;
         while (tail != null) {
             System.out.print(tail.val);
             if (tail.next != null) {

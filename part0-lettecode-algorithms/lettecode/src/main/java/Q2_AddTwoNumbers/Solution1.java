@@ -1,6 +1,6 @@
 package Q2_AddTwoNumbers;
 
-import common.ListNode;
+import common.Node;
 
 /**
  * 2 个逆序的链表，要求从低位开始相加，得出结果也逆序输出，返回值是逆序结果链表的头结点。
@@ -34,9 +34,9 @@ import common.ListNode;
 
 public class Solution1 {
 
-    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public static Node addTwoNumbers(Node l1, Node l2) {
         // 定义中间变量：
-        ListNode head = null, tail = null;
+        Node head = null, tail = null;
         // 进位值
         int carry = 0;
 
@@ -47,9 +47,9 @@ public class Solution1 {
             int n2 = l2 != null ? l2.val : 0;
             int sum = n1 + n2 + carry;
             if (head == null) {
-                head = tail = new ListNode(sum % 10);
+                head = tail = new Node(sum % 10);
             } else {
-                tail.next = new ListNode(sum % 10);
+                tail.next = new Node(sum % 10);
                 tail = tail.next;
             }
             // 计算进位值，如果sum>10 则代表需要进位
@@ -65,19 +65,19 @@ public class Solution1 {
         }
         //额外情况处理：已经到了最后一步，但是此时还需要进位
         if (carry == 1) {
-            tail.next = new ListNode(carry);
+            tail.next = new Node(carry);
         }
         return head;
     }
 
     public static void main(String[] args) {
-        ListNode l1 = new ListNode(2,new ListNode(4,new ListNode(3)));
-        ListNode.printList(l1);
+        Node l1 = new Node(2,new Node(4,new Node(3)));
+        Node.printList(l1);
 
-        ListNode l2 = new ListNode(4,new ListNode(6,new ListNode(5)));
-        ListNode.printList(l2);
+        Node l2 = new Node(4,new Node(6,new Node(5)));
+        Node.printList(l2);
 
-        ListNode listRes = addTwoNumbers(l1, l2);
-        ListNode.printList(listRes);
+        Node listRes = addTwoNumbers(l1, l2);
+        Node.printList(listRes);
     }
 }

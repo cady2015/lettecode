@@ -1,9 +1,32 @@
-package base_sort;
+package common;
 
 import java.util.Arrays;
 
 public class CommonUtil {
-
+    public static void printListNodes(Node head){
+        System.out.print("Head -> ");
+        while (head!=null){
+            System.out.print(head.val+" -> ");
+            head = head.next;
+        }
+        System.out.println("null");
+    }
+    public static void printDoubleListNodesFromHead(DoubleNode head){
+        System.out.print("Head -> ");
+        while (head!=null){
+            System.out.print(head.val+" -> ");
+            head = head.next;
+        }
+        System.out.println("null");
+    }
+    public static void printDoubleListNodesFromTail(DoubleNode tail){
+        System.out.print("Head -> ");
+        while (tail!=null){
+            System.out.print(tail.val+" -> ");
+            tail = tail.last;
+        }
+        System.out.println("null");
+    }
     public static void printArray(int[] inputArr) {
         for (int i = 0; i < inputArr.length; i++) {
             if (i == 0) {

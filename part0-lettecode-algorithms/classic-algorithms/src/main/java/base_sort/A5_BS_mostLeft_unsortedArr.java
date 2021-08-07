@@ -4,8 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 
-import static base_sort.CommonUtil.generateRandomArray;
-import static base_sort.CommonUtil.printArray;
+import static common.CommonUtil.generateRandomArray;
+import static common.CommonUtil.printArray;
 
 /**
  * 二分查找

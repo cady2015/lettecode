@@ -1,8 +1,6 @@
 package base_sort;
 
-import java.util.Arrays;
-
-import static base_sort.CommonUtil.*;
+import static common.CommonUtil.*;
 
 /**
  * 选择排序

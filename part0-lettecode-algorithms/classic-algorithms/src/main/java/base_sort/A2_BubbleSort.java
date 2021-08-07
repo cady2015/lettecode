@@ -1,7 +1,7 @@
 package base_sort;
 
 
-import static base_sort.CommonUtil.*;
+import static common.CommonUtil.*;
 
 /**
  * 冒泡排序

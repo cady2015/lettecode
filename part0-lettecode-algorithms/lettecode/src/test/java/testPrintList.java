@@ -1,9 +1,9 @@
-import common.ListNode;
+import common.Node;
 
 public class testPrintList {
     public static void main(String[] args) {
-        ListNode listNode = new ListNode(2,new ListNode(4,new ListNode(3)));
+        Node node = new Node(2,new Node(4,new Node(3)));
 
-        listNode.printList(listNode);
+        node.printList(node);
     }
 }
