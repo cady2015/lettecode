@@ -13,7 +13,7 @@ import common.CommonUtil;
  * push 入栈
  * pop 出栈
  */
-public class A4_RindArray {
+public class A4_RingArray {
     public static class MyQueue {
 
         private int[] arr;

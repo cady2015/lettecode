@@ -1,7 +1,4 @@
 package Q2_AddTwoNumbers;
-
-import common.Node;
-
 /**
  *
  * 两数相加--链表版本
@@ -16,6 +13,7 @@ import common.Node;
  */
 
 class Solution2 {
+
     public static Node addTwoNumbers(Node l1, Node l2) {
         if(l1 == null && l2 ==null){
             return null;
@@ -36,6 +34,33 @@ class Solution2 {
             }
         }
         return new Node(rval, addTwoNumbers(l1.next, l2.next));
+    }
+
+    public static class Node{
+        public int val;
+        public Node next;
+        public Node last;
+        public Node(int val, Node next) {
+            this.val = val;
+            this.next = next;
+        }
+
+        public Node(int value) {
+            this.val = value;
+        }
+
+        public static void printList(Node head) {
+            Node tail = head;
+            while (tail != null) {
+                System.out.print(tail.val);
+                if (tail.next != null) {
+                    System.out.print(" -> ");
+                } else {
+                    System.out.println();
+                }
+                tail = tail.next;
+            }
+        }
     }
     public static void main(String[] args) {
         Node l1 = new Node(2,new Node(4,new Node(3)));
