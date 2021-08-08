@@ -130,7 +130,6 @@ public class A3_DoubleEndsListToStackAndQueue {
         public boolean isEmpty() {
             return queue.isEmpty();
         }
-
     }
 
     public static class MyQueue<T> {
