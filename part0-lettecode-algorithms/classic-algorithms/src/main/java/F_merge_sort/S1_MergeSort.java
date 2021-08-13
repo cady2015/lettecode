@@ -7,7 +7,7 @@ import D_common.CommonUtil;
  * 1.使用递归方式实现
  * 2.使用非递归方式实现
  */
-public class MergeSort {
+public class S1_MergeSort {
 
     /**
      * 1.使用递归方式
