@@ -76,7 +76,7 @@ public class CommonUtil {
      *
      * @param arr
      */
-    public static void comparator(int[] arr) {
+    public static void javaSort(int[] arr) {
         Arrays.sort(arr);
     }
 

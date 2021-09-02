@@ -39,7 +39,7 @@ public class A3_InsertionSort {
             int[] arr1 = generateRandomArray(maxSize, maxValue);
             int[] arr2 = copyArray(arr1);
             insertionSort(arr1);
-            comparator(arr2);
+            javaSort(arr2);
             if (!isEqual(arr1, arr2)) {
                 succeed = false;
                 printArray(arr1);
