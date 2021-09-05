@@ -17,11 +17,13 @@ public class S2_HeapSort {
         if (arr == null || arr.length < 2) {
             return;
         }
-
-        //让数组成为一个大顶堆
+        //时间复杂度： O(N*logN)
 //        for (int i = 0; i <= arr.length - 1; i++) {
 //            heapInsert(arr, i);
 //        }
+
+        //heapInsert 操作的优化：Heapify 让数组成为一个大顶堆
+        // 能够优化的前提：用户一次性给一个数组让你调整成大顶堆，可以做这样的优化，将时间复杂度从 O(N*logN) 降低为 O(N)
         for (int i = arr.length - 1; i >= 0; i--) {
             heapify(arr, i, arr.length);
         }
@@ -103,7 +105,8 @@ public class S2_HeapSort {
     }
 
     /**
-     * 让index到heapsize上的值满足大根堆的特性
+     * 让index到heapsize上的值不断让arr[index]下沉，满足大根堆的特性
+     * 停止下沉的条件：1.不再有孩子比自己小  2.没有了孩子
      */
     private static void heapify(Integer[] arr, int index, int heapSize) {
         int left = index * 2 + 1;
