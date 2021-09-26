@@ -1,12 +1,5 @@
 package A_base_sort;
 
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Calendar;
-
-import static D_common.CommonUtil.copyArray;
-import static D_common.CommonUtil.generateRandomArray;
-
 /**
  * 快速排序---未完
  * Created by llj on 2019/7/8.
@@ -44,36 +37,18 @@ public class A6_QuickSort {
     }
 
     public static void main(String[] args) {
-        Calendar instance = Calendar.getInstance();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        int testTime = 500000;
-        int maxSize = 10;
-        int maxValue = 100;
-        for (int i = 0; i < testTime; i++) {
-            if ((i + 1) % 100000 == 0) {
-                System.out.println(simpleDateFormat.format(instance.getTime()) + "\talready passed :[" + i + "] test cases");
-            }
-            int[] arr = generateRandomArray(maxSize, maxValue);
-            while (arr.length < 2) {
-                arr = generateRandomArray(maxSize, maxValue);
-            }
+        int[] arr = new int[]{3, 2, 5, 7, 4, 1, 6, 9, 8};
 
-            int[] copyArray = copyArray(arr);
-            Arrays.sort(copyArray);
-            int[] ints = quickSort(arr, 0, arr.length - 1);
-            boolean error_occured = false;
-            for (int j =0;j< ints.length;j++) {
-                if (ints[j]!=copyArray[j]){
-                    System.out.println("Oops!");
-                    break;
-                }
-            }
-            if (error_occured!=false){
-                System.out.println("Fucking fucked");
-                break;
-            }
+        System.out.println("Before sort:");
+        for (int i : arr) {
+            System.out.print(i);
         }
+        System.out.println("\r\nAfter sort:");
 
-        System.out.println("Congrants");
+        int[] ints = quickSort(arr, 0, arr.length - 1);
+
+        for (int i : ints) {
+            System.out.print(i);
+        }
     }
 }

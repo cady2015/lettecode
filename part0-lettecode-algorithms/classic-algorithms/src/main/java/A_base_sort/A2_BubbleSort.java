@@ -4,7 +4,7 @@ package A_base_sort;
 import static D_common.CommonUtil.*;
 
 /**
- * 冒泡排序 O(N^2)
+ * 冒泡排序
  * <p>
  * 注意：
  * 1.外层循环 N-1次

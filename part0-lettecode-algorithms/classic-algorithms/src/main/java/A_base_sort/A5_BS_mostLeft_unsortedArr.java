@@ -60,7 +60,6 @@ public class A5_BS_mostLeft_unsortedArr {
             while (arr .length<2) {
                 arr = generateRandomArray(maxSize, maxValue);
             }
-
             Arrays.sort(arr);
             int value = (int) ((maxValue + 1) * Math.random()) - (int) (maxValue * Math.random());
             if (test(arr, value) != mostLeftNoLessNumIndex(arr, value)) {
@@ -85,11 +84,9 @@ public class A5_BS_mostLeft_unsortedArr {
         while (arr .length<2) {
             arr = generateRandomArray(maxSize, maxValue);
         }
-        int value = arr[(int) ((arr.length ) * Math.random())];
-        System.out.println("Before sort:");
-        printArray(arr);
+        int value = (int) ((maxValue + 1) * Math.random()) - (int) (maxValue * Math.random());
         Arrays.sort(arr);
-        System.out.print("After sort:");
+        System.out.print("Arr:");
         printArray(arr);
         System.out.print("target value:");
         System.out.println(value);
