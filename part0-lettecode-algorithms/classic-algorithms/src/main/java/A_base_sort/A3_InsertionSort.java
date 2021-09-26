@@ -15,9 +15,9 @@ public class A3_InsertionSort {
             return;
         }
 
-        // 0 ~ 1
-        // 0 ~ 2
-        // 0 ~ n
+        // 0 ~ 1 上找到最小值，放在数组最左
+        // 0 ~ 2 上找到最小值，放在数组最左
+        // 0 ~ n 上找到最小值，放在数组最左
         for (int i = 1; i < arr.length; i++) {
             for (int j = i; j >0 ; j--){
                 if (arr[j] < arr[j-1]){

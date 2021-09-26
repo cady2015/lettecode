@@ -47,7 +47,7 @@ public class A4_BSExist {
         Calendar instance = Calendar.getInstance();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         int testTime = 500000;
-        int maxSize = 10;
+        int maxSize = 100;
         int maxValue = 100;
         boolean succeed = true;
         for (int i = 0; i < testTime; i++) {

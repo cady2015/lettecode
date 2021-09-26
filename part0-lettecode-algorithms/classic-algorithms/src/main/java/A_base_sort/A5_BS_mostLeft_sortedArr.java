@@ -84,7 +84,7 @@ public class A5_BS_mostLeft_sortedArr {
         while (arr .length<2) {
             arr = generateRandomArray(maxSize, maxValue);
         }
-        int value = (int) ((maxValue + 1) * Math.random()) - (int) (maxValue * Math.random());
+        int value = arr[(int) ((arr.length ) * Math.random())];
         Arrays.sort(arr);
         System.out.print("Arr:");
         printArray(arr);
